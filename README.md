@@ -12,7 +12,7 @@ pip install opencv-python tensorboardX numpy h5py scikit-learn # install other d
 mkdir build && cd build && cmake .. -GNinja && ninja && source setpath.sh #build mitsuba and set python path
 ```
 ## Run
-Download `data/` and `result_sample/` (optional) from here(todo) and extract it into `EPSM/` folder
+Download `data/` and `result_sample/` (optional) from here(todo) and extract it into `EPSM/` folder ([Google Drive](https://drive.google.com/drive/folders/14Rm27_l5nLsCJ--b3jxxvS6i8_T-NBTz?usp=share_link))
 ```bash
 cd EPSM
 python optim.py METHOD EXP_NAME 
