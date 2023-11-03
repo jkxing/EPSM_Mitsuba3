@@ -57,7 +57,7 @@ if __name__=="__main__":
     pose_params_opt.requires_grad = True
     shape_params = (torch.rand(1, 10) * 0.0).cuda()
 
-    optimizer = torch.optim.Adam([pose_params_opt], lr=0.005)
+    optimizer = torch.optim.Adam([pose_params_opt], lr=0.01)
     init_verts = model.gen_mesh(pose_params_opt,shape_params)[0]
     params = mi.traverse(scene)
     optim_vert = mi.Point3f(init_verts)
@@ -128,6 +128,7 @@ if __name__=="__main__":
         loss = torch.sum(verts*grad)
         loss.backward()
         optimizer.step()
+    
     Logger.exit()
     img_final = mi.render(scene, params, seed=0, spp=8192, sensor=0)
     img_final = torch.from_numpy(np.array( mi.util.convert_to_bitmap(img_final[...,:3]))).to(device)/255.0

@@ -605,8 +605,8 @@ class EPSMIntegrator(ADIntegrator):
                 Lr_dir = β * mis_em * bsdf_value_em * em_weight
 
                 if not primal:
-                    # handle shadow path for direct lighting 
-                    if iteration==0 and max_depth<=2:
+                    # handle shadow path for direct lighting (not finished yet)
+                    if iteration==0 and max_depth<=3:
                         ray_direct = si.spawn_ray(ds.d)
                         si_direct = scene.ray_intersect(ray_direct,
                                             ray_flags=mi.RayFlags.All | mi.RayFlags.FollowShape,

@@ -3,11 +3,11 @@ import drjit as dr
 import os,sys
 import torch
 import numpy as np
-it=500 # 500
+it=1000 # 500
 spp=64
 resolution=512
 thres = 1200
-max_depth = 2
+max_depth = 3
 match_res = 256
 
 if torch.cuda.is_available():
