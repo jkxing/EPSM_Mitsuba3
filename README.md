@@ -2,6 +2,7 @@
 Siggraph Asia 2023 Paper "Extended Path Space Manifold for Physically Based Differentiable Rendering"
 
 # Install
+2024/5/4 update: some thiry parties may not compatible for the code, I've upload a zip file contains available code here([Google Drive](https://drive.google.com/file/d/1eAiD8Ftz1apnrihpEwpnipSyfFmCVvcl/view?usp=sharing))
 ## Set Environment
 ```bash
 conda create -n EPSM python=3.9 #create python env
